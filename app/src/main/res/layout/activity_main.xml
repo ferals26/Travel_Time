@@ -16,11 +16,11 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginStart="232dp"
-        android:layout_marginLeft="232dp"
-        android:layout_marginTop="19dp"
-        android:layout_marginEnd="41dp"
-        android:layout_marginRight="41dp"
+        android:layout_marginStart="217dp"
+        android:layout_marginLeft="217dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginRight="56dp"
         android:hint="Seleccionar fecha"
         android:textSize="13sp" />
 
@@ -32,7 +32,7 @@
         android:layout_alignParentRight="true"
         android:layout_marginStart="94dp"
         android:layout_marginLeft="94dp"
-        android:layout_marginTop="231dp"
+        android:layout_marginTop="325dp"
         android:layout_marginRight="13dp"
         android:layout_toEndOf="@+id/textView2"
         android:layout_toRightOf="@+id/textView2"
@@ -52,7 +52,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="72dp"
         android:layout_marginLeft="72dp"
-        android:layout_marginTop="234dp"
+        android:layout_marginTop="325dp"
         android:text="Salida"
         android:textColor="@color/texoprimario"
         android:textSize="24sp"
@@ -71,7 +71,7 @@
         android:layout_alignParentRight="true"
         android:layout_marginStart="107dp"
         android:layout_marginLeft="107dp"
-        android:layout_marginTop="108dp"
+        android:layout_marginTop="200dp"
         android:layout_marginRight="-37dp"
         android:layout_toEndOf="@+id/textView2"
         android:layout_toRightOf="@+id/textView2"
@@ -91,7 +91,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="72dp"
         android:layout_marginLeft="31dp"
-        android:layout_marginTop="112dp"
+        android:layout_marginTop="200dp"
         android:text="Origen"
         android:textColor="@color/texoprimario"
         android:textSize="24sp"
@@ -109,7 +109,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginTop="163dp"
+        android:layout_marginTop="260dp"
         android:layout_marginEnd="204dp"
         android:layout_marginRight="204dp" />
 
@@ -120,7 +120,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginTop="163dp"
+        android:layout_marginTop="260dp"
         android:layout_marginEnd="17dp"
         android:layout_marginRight="17dp" />
 
@@ -133,11 +133,11 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginStart="73dp"
-        android:layout_marginLeft="73dp"
-        android:layout_marginTop="19dp"
-        android:layout_marginEnd="200dp"
-        android:layout_marginRight="200dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginLeft="56dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="217dp"
+        android:layout_marginRight="217dp"
         android:hint="Seleccionar fecha"
         android:textSize="13sp" />
 
@@ -147,7 +147,7 @@
         android:layout_height="wrap_content"
         android:text="Nombre del viaje"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="345dp"
+        android:layout_marginTop="90dp"
         android:textSize="22sp"
         android:textColor="@color/texoprimario"
         />
@@ -156,7 +156,7 @@
         android:layout_width="300dp"
         android:layout_height="40dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="390dp"
+        android:layout_marginTop="135dp"
         android:hint="Escribir nombre del viaje"
         android:background="@drawable/edit_round"
         />
@@ -165,20 +165,20 @@
         android:id="@+id/button"
         android:layout_width="150dp"
         android:layout_height="40dp"
-        android:layout_marginLeft="50dp"
+        android:layout_marginLeft="40dp"
         android:layout_marginTop="600dp"
-        android:text="Aceptar"
-        android:textColor="#FFFFFF"
         android:background="@drawable/custom_buttom"
-        />
+        android:text="Aceptar"
+        android:textColor="#FFFFFF" />
+
     <Button
         android:id="@+id/button1"
         android:layout_width="150dp"
         android:layout_height="40dp"
-        android:layout_marginLeft="225dp"
+        android:layout_marginLeft="200dp"
         android:layout_marginTop="600dp"
-        android:text="Cancelar"
         android:background="@drawable/custom_buttom"
+        android:text="Cancelar"
         android:textColor="#FFFFFF"
         tools:ignore="DuplicateIds" />
 </RelativeLayout>
