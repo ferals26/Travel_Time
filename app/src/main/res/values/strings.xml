@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">TravelTime</string>
+
+    <string-array name="Ciudades">
+        <item>Selecciona</item>
+        <item>Ciudad de mexico</item>
+        <item>Cancun</item>
+        <item>Guadalajara</item>
+        <item>Monterrey</item>
+        <item>Tijuana</item>
+        <item>Queretaro</item>
+        <item>Toluca</item>
+        <item>San luis potosi</item>
+        <item>Aguas Calientes</item>
+        <item>Oaxaca</item>
+        <item>Mazatlan</item>
+        <item>Guanajato</item>
+    </string-array>
+</resources>
