@@ -111,7 +111,7 @@
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="40dp" />
     <Button
-        android:id="@+id/btnRegistrarse"
+        android:id="@+id/btnRegistrar"
         android:layout_width="210dp"
         android:layout_height="54dp"
         android:layout_marginStart="90dp"
