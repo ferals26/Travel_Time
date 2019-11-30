@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".tuviaje"></activity>
+        <activity android:name=".inicio"></activity>
+        <activity android:name=".registrarusuario" />
+        <activity android:name=".tuviaje" />
         <activity android:name=".listsnotes" />
         <activity android:name=".MainActivity">
             <intent-filter>

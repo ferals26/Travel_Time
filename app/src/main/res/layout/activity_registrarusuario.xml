@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorLightPrimary"
+    tools:context=".registrarusuario">
+
+    <ImageView
+        android:id="@+id/imageLogo"
+        android:layout_width="147dp"
+        android:layout_height="146dp"
+        android:layout_marginStart="95dp"
+        app:srcCompat="@drawable/logo"
+        android:layout_marginLeft="95dp" />
+    <TextView
+        android:id="@+id/txNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:text="Nombre"
+        android:textColor="@color/colorPrimaryText"
+        android:textSize="18dp" />
+    <EditText
+        android:id="@+id/editNombre"
+        android:layout_width="300dp"
+        android:layout_height="37dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="40dp"
+        android:background="@drawable/edit_round2"
+        android:ems="10"
+        android:textColor="@color/colorLightPrimary"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="40dp" />
+    <TextView
+        android:id="@+id/txemail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:text="Email"
+        android:textColor="@color/colorPrimaryText"
+        android:textSize="18dp" />
+    <EditText
+        android:id="@+id/editemail"
+        android:layout_width="300dp"
+        android:layout_height="37dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="40dp"
+        android:background="@drawable/edit_round2"
+        android:ems="10"
+        android:textColor="@color/colorLightPrimary"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="40dp" />
+    <TextView
+        android:id="@+id/txUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:text="Usuario"
+        android:textColor="@color/colorPrimaryText"
+        android:textSize="18dp" />
+    <EditText
+        android:id="@+id/editUsuario"
+        android:layout_width="300dp"
+        android:layout_height="37dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="40dp"
+        android:background="@drawable/edit_round2"
+        android:ems="10"
+        android:textColor="@color/colorLightPrimary"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="40dp" />
+    <TextView
+        android:id="@+id/txContra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:text="Contraseña"
+        android:textColor="@color/colorPrimaryText"
+        android:textSize="18dp" />
+    <EditText
+        android:id="@+id/editContra"
+        android:layout_width="300dp"
+        android:layout_height="37dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="40dp"
+        android:background="@drawable/edit_round2"
+        android:ems="10"
+        android:textColor="@color/colorLightPrimary"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="40dp" />
+    <TextView
+        android:id="@+id/txConfirmar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:text="Confirmar contraseña"
+        android:textColor="@color/colorPrimaryText"
+        android:textSize="18dp" />
+    <EditText
+        android:id="@+id/editConfirmar"
+        android:layout_width="300dp"
+        android:layout_height="37dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="40dp"
+        android:background="@drawable/edit_round2"
+        android:ems="10"
+        android:textColor="@color/colorLightPrimary"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="40dp" />
+    <Button
+        android:id="@+id/btnRegistrarse"
+        android:layout_width="210dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/custom_buttom"
+        android:text="Registrarse"
+        android:textColor="#FFFFFF"
+        android:layout_marginLeft="90dp" />
+
+
+
+</LinearLayout>
