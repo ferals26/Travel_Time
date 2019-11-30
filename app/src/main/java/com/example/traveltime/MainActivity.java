@@ -26,6 +26,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     private TextView mDisplayDate;
     private DatePickerDialog.OnDateSetListener mDateSetListener;
     private DatePickerDialog.OnDateSetListener mDateSetListener1;
+    private Spinner spinner;
+    private Spinner spinners;
 
    Button boton;
 
@@ -44,18 +46,12 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             }
         });
 
-        Spinner spinner = findViewById(R.id.spinner1);
+        spinner = (Spinner)findViewById(R.id.spinner1);
+        spinners = (Spinner)findViewById(R.id.spinner2);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.Ciudades, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
-        spinner.setOnItemSelectedListener(this);
-
-        Spinner spinners = findViewById(R.id.spinner2);
-        ArrayAdapter<CharSequence> adapters = ArrayAdapter.createFromResource(this, R.array.Ciudades, android.R.layout.simple_spinner_item);
-        adapters.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinners.setAdapter(adapters);
-        spinners.setOnItemSelectedListener(this);
-
+        spinners.setAdapter(adapter);
 
         mDisplayDate = (TextView) findViewById(R.id.tvDate);
         mDisplayDate.setOnClickListener(new View.OnClickListener() {
