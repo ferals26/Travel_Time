@@ -20,7 +20,7 @@ public class login extends AppCompatActivity {
         Iniciar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(login.this, listsnotes.class));
+                startActivity(new Intent(login.this, inicio.class));
             }
         });
 
