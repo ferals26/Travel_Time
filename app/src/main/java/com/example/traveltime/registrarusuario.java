@@ -25,7 +25,7 @@ import java.util.Map;
 
 public class registrarusuario extends AppCompatActivity implements View.OnClickListener {
 
-    private EditText Confirmar;
+     private Button btnTengocuenta;
      private Button btnRegistrar;
      private EditText editContra;
      private EditText editUsuario;
@@ -44,16 +44,23 @@ public class registrarusuario extends AppCompatActivity implements View.OnClickL
       mDatabase = FirebaseDatabase.getInstance().getReference();
 
 
-      Confirmar = (EditText) findViewById(R.id.Confirmar);
+
       editContra = (EditText) findViewById(R.id.editContra);
         editUsuario = (EditText) findViewById(R.id.editUsuario);
         editemail = (EditText) findViewById(R.id.editemail);
         editNombre = (EditText) findViewById(R.id.editNombre);
-
+        btnTengocuenta = (Button) findViewById(R.id.btnTengocuenta);
         btnRegistrar = (Button) findViewById(R.id.btnRegistrar);
         progressDialog = new ProgressDialog(this);
         btnRegistrar.setOnClickListener(this);
 
+        btnTengocuenta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(registrarusuario.this, login.class));
+                //finish();
+            }
+        });
     }
 
     private void registrarUsuario(){
@@ -62,7 +69,7 @@ public class registrarusuario extends AppCompatActivity implements View.OnClickL
         final String Email = editemail.getText().toString().trim();
         final String Usuario = editUsuario.getText().toString().trim();
         final String Contraseña = editContra.getText().toString().trim();
-        final String confirmar = Confirmar.getText().toString().trim();
+
 
         //Verificamos si las cajas estan vacias
         if(TextUtils.isEmpty(Email)){
@@ -81,10 +88,7 @@ public class registrarusuario extends AppCompatActivity implements View.OnClickL
             Toast.makeText(this,"Se debe ingresar una contraseña",Toast.LENGTH_LONG).show();
             return;
         }
-        if(TextUtils.isEmpty(confirmar)){
-            Toast.makeText(this,"Se debe ingresar de nuevo la contraseña",Toast.LENGTH_LONG).show();
-            return;
-        }
+
 
         progressDialog.setMessage("Realizando registro...");
         progressDialog.show();
@@ -99,7 +103,6 @@ public class registrarusuario extends AppCompatActivity implements View.OnClickL
                    map.put("Email", Email);
                    map.put("Usuario", Usuario);
                    map.put("Contraseña", Contraseña);
-                   map.put("Confirmar", confirmar);
 
                    String id = firebaseAuth.getCurrentUser().getUid();
                    mDatabase.child("Users").child(id).setValue(map).addOnCompleteListener(new OnCompleteListener<Void>() {
@@ -129,4 +132,6 @@ public class registrarusuario extends AppCompatActivity implements View.OnClickL
     public void onClick(View v) {
     registrarUsuario();
     }
+
+
 }
