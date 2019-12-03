@@ -8,9 +8,13 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -55,12 +59,34 @@ LayoutInflater inflater;
            view.setBackgroundColor(getContext().getResources().getColor(R.color.colorPrimaryDark));
        }
        else{
-           view.setBackgroundColor(Color.parseColor("#cccccc"));
+                view.setBackgroundColor(Color.parseColor("#cccccc"));
        }
-        TextView Day_Number =   view.findViewById(R.id.calendar_day);
-       Day_Number.setText(String.valueOf(DayNo));
 
+        TextView Day_Number =   view.findViewById(R.id.calendar_day);
+       TextView EventNumber = view.findViewById(R.id.events_id);
+       Day_Number.setText(String.valueOf(DayNo));
+       Calendar eventCalendar = Calendar.getInstance();
+       ArrayList<String> arrayList = new ArrayList<>();
+       for (int i = 0; i < events.size(); i++){
+       eventCalendar.setTime(ConvertStringToDate(events.get(i).getDATE()));
+       if(DayNo == eventCalendar.get(Calendar.DAY_OF_MONTH) && displayMonth == eventCalendar.get(Calendar.MONTH)+1
+           && displayYear == eventCalendar.get(Calendar.YEAR)){
+           arrayList.add(events.get(i).getEVENT());
+           EventNumber.setText(arrayList.size()+"Events");
+           }
+       }
        return  view;
+    }
+
+    private Date ConvertStringToDate(String eventDate){
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH);
+        Date date= null;
+        try{
+            date = format.parse(eventDate);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return  date;
     }
 
 
