@@ -214,6 +214,7 @@
         android:layout_marginLeft="200dp"
         android:layout_marginTop="500dp"
         android:text="Actividades"
+        android:id="@+id/actividadbtn"
         android:background="@drawable/botones_dos"
         android:textColor="#FFFFFF"/>
 </RelativeLayout>

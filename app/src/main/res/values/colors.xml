@@ -9,4 +9,5 @@
     <color name="texoprimario">#212121</color>
     <color name="colorPrimaryText">#212121</color>
     <color name="backgroundcolor">#FCFCFC</color>
+    <color name="event">#4db6ac</color>
 </resources>
