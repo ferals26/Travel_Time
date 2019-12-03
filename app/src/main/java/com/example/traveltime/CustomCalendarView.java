@@ -3,6 +3,7 @@ package com.example.traveltime;
 import android.app.AlertDialog;
 import android.app.TimePickerDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.provider.CalendarContract;
@@ -142,7 +143,7 @@ public class CustomCalendarView extends LinearLayout {
                 View showView = LayoutInflater.from(parent.getContext()).inflate(R.layout.show_events_layout, null );
                 RecyclerView recyclerView = showView.findViewById(R.id.EventsRV);
                 RecyclerView.LayoutManager layoutManager = new LinearLayoutManager((showView.getContext()));
-                recyclerView .setLayoutManager(layoutManager);
+                recyclerView.setLayoutManager(layoutManager);
                 recyclerView.setHasFixedSize(true);
                 EventRecyclerAdapter eventRecyclerAdapter = new EventRecyclerAdapter(showView.getContext(), CollectEventByDate(date));
                 recyclerView.setAdapter(eventRecyclerAdapter);
@@ -151,6 +152,12 @@ public class CustomCalendarView extends LinearLayout {
                 builder.setView(showView);
                 alertDialog =builder.create() ;
                 alertDialog.show();
+                alertDialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
+                    @Override
+                    public void onCancel(DialogInterface dialog) {
+                     SetUpCalendar();
+                    }
+                });
 
                 return true;
             }
