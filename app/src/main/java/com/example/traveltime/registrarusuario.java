@@ -72,12 +72,12 @@ public class registrarusuario extends AppCompatActivity implements View.OnClickL
 
 
         //Verificamos si las cajas estan vacias
-        if(TextUtils.isEmpty(Email)){
-            Toast.makeText(this,"Se debe ingresar un Email",Toast.LENGTH_LONG).show();
-            return;
-        }
         if(TextUtils.isEmpty(Nombre)){
             Toast.makeText(this,"Se debe ingresar un Nombre",Toast.LENGTH_LONG).show();
+            return;
+        }
+        if(TextUtils.isEmpty(Email)){
+            Toast.makeText(this,"Se debe ingresar un Email",Toast.LENGTH_LONG).show();
             return;
         }
         if(TextUtils.isEmpty(Usuario)){
