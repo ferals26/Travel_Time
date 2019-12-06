@@ -95,7 +95,7 @@ public class CustomCalendarView extends LinearLayout {
                         int hours = calendar.get(Calendar.HOUR_OF_DAY);
                         int minuts = calendar.get(Calendar.MINUTE);
                         TimePickerDialog timePickerDialog = new TimePickerDialog(addView.getContext(), R.style.Theme_AppCompat_Dialog,
-                                new TimePickerDialog.OnTimeSetListener() {
+                                        new TimePickerDialog.OnTimeSetListener() {
                                     @Override
                                     public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
                                         Calendar c = calendar.getInstance();
@@ -218,7 +218,7 @@ public class CustomCalendarView extends LinearLayout {
         monthCalendar.set(Calendar.DAY_OF_MONTH,1);
         int FirstDayofMonth = monthCalendar.get(Calendar.DAY_OF_WEEK)-1;
         monthCalendar.add(Calendar.DAY_OF_MONTH, -FirstDayofMonth);
-        //CollectEventsPerMonth(monthFormat.format(calendar.getTime()),yearFormate.format(calendar.getTime()));
+        CollectEventsPerMonth(monthFormat.format(calendar.getTime()),yearFormate.format(calendar.getTime()));
 
         while(dates.size()<MAX_CALENDAR_DAYS){
             dates.add(monthCalendar.getTime());

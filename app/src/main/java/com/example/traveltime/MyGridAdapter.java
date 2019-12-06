@@ -51,7 +51,7 @@ LayoutInflater inflater;
        int currentMonth = currentDate.get(Calendar.MONTH)+1;
         int currentYear = currentDate.get(Calendar.YEAR);
 
-               View view = convertView;
+         View view = convertView;
        if(view == null){
            view = inflater.inflate(R.layout.single_cell_layout, parent,false);
        }
@@ -59,15 +59,15 @@ LayoutInflater inflater;
            view.setBackgroundColor(getContext().getResources().getColor(R.color.colorPrimaryDark));
        }
        else{
-                view.setBackgroundColor(Color.parseColor("#cccccc"));
+           view.setBackgroundColor(Color.parseColor("#cccccc"));
        }
 
-        TextView Day_Number =   view.findViewById(R.id.calendar_day);
+        TextView Day_Number = view.findViewById(R.id.calendar_day);
        TextView EventNumber = view.findViewById(R.id.events_id);
        Day_Number.setText(String.valueOf(DayNo));
        Calendar eventCalendar = Calendar.getInstance();
        ArrayList<String> arrayList = new ArrayList<>();
-       for (int i = 0; i < events.size(); i++){
+       for (int i = 0; i < events.size(); i++){ 
        eventCalendar.setTime(ConvertStringToDate(events.get(i).getDATE()));
        if(DayNo == eventCalendar.get(Calendar.DAY_OF_MONTH) && displayMonth == eventCalendar.get(Calendar.MONTH)+1
            && displayYear == eventCalendar.get(Calendar.YEAR)){
