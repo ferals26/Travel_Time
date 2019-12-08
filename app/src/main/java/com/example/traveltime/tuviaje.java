@@ -11,6 +11,7 @@ import java.util.Calendar;
 
 public class tuviaje extends AppCompatActivity {
     Button Actividad;
+    Button Hospedaje;
 
 
 
@@ -24,6 +25,14 @@ public class tuviaje extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(tuviaje.this, MainActivity2.class));
+            }
+        });
+
+        Hospedaje = (Button) findViewById(R.id.btnHospedaje);
+        Hospedaje.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(tuviaje.this, Hospedaje.class));
             }
         });
 

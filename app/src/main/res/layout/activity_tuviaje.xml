@@ -206,6 +206,7 @@
         android:layout_marginLeft="40dp"
         android:layout_marginTop="500dp"
         android:text="Hospedaje"
+        android:id="@+id/btnHospedaje"
         android:background="@drawable/botones_dos"
         android:textColor="#FFFFFF"/>
     <Button

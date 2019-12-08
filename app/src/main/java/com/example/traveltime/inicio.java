@@ -66,6 +66,13 @@ public class inicio extends AppCompatActivity {
         startActivity(intent);
 
     }
+    public void tuHospedaje(View view){
+        Intent intent = new Intent(this, Hospedaje.class);
+        startActivity(intent);
+
+    }
+
+
 
     private void getUserInfo(){
         String id = mAuth.getCurrentUser().getUid();

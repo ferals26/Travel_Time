@@ -43,15 +43,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     private DatePickerDialog.OnDateSetListener mDateSetListener1;
     private Spinner spinner;
     private Spinner spinners;
-
-
-
    Button boton;
    Button boton1;
-
-
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -95,7 +88,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             }
         } );
 
-        mDisplayDate1 = (TextView) findViewById(R.id.fecha);
+        mDisplayDate1 = (TextView) findViewById(R.id.fecha1);
         mDisplayDate1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

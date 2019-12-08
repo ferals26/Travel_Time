@@ -18,7 +18,7 @@
             android:text="Nombre del evento"
             style="@style/AppTheme"
             android:width="150dp"
-            android:textSize="17sp" />
+            android:textSize="16sp" />
         <EditText
             android:layout_width="0dp"
             android:layout_weight="1"
