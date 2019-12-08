@@ -1,12 +1,16 @@
 package com.example.traveltime;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -18,7 +22,17 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.util.Calendar;
+import java.util.HashMap;
+import java.util.Map;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
@@ -29,9 +43,14 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     private DatePickerDialog.OnDateSetListener mDateSetListener1;
     private Spinner spinner;
     private Spinner spinners;
-    EditText NombreViaje;
+
+
 
    Button boton;
+   Button boton1;
+
+
+
 
 
     @Override
@@ -40,11 +59,14 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         setContentView(R.layout.activity_main);
 
         boton= (Button) findViewById(R.id.button);
-        boton.setOnClickListener(new View.OnClickListener(){
+        boton1= (Button) findViewById(R.id.button1);
+
+
+        boton1.setOnClickListener(new View.OnClickListener(){
 
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, listsnotes.class));
+                startActivity(new Intent(MainActivity.this, inicio.class));
             }
         });
 
@@ -55,7 +77,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         spinner.setAdapter(adapter);
         spinners.setAdapter(adapter);
 
-        mDisplayDate = (TextView) findViewById(R.id.tvDate);
+        mDisplayDate = (TextView) findViewById(R.id.fecha);
         mDisplayDate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -73,7 +95,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             }
         } );
 
-        mDisplayDate1 = (TextView) findViewById(R.id.tvDate1);
+        mDisplayDate1 = (TextView) findViewById(R.id.fecha);
         mDisplayDate1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -113,6 +135,8 @@ mDateSetListener = new DatePickerDialog.OnDateSetListener() {
 };
 
     }
+
+
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {

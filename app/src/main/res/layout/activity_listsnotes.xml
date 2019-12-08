@@ -16,7 +16,7 @@
         android:text="Viaje"
         android:background="@drawable/custom_buttom"
         android:textColor="#FFFFFF"
-         />
+        />
 
     <TextView
         android:id="@+id/textView5"

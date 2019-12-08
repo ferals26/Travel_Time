@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#E1BEE7">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nombre del evento"
+            style="@style/AppTheme"
+            android:width="150dp"
+            android:textSize="18sp" />
+        <EditText
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            style="@style/AppTheme"
+            android:textSize="20sp"
+            android:id="@+id/name_text"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            style="@style/AppTheme"
+            android:width="150dp"
+            android:text="Dia del evento" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:text="Ingresa Fecha"
+            style="@style/AppTheme"
+            android:layout_height="wrap_content"
+            android:id="@+id/date_text"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recordatorio"
+            style="@style/AppTheme"
+            android:width="150dp"
+            android:textSize="18sp"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:text="Tiempo de entrada"
+            style="@style/AppTheme"
+            android:layout_height="wrap_content"
+            android:id="@+id/time_text"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Descripcion"
+            style="@style/AppTheme"
+            android:width="150dp"
+            android:textSize="18sp"/>
+        <EditText
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            style="@style/AppTheme"
+            android:lines="4"
+            android:layout_height="wrap_content"
+            android:id="@+id/desc_text"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ID"
+            style="@style/AppTheme"
+            android:width="150dp"
+            android:textSize="20sp"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:inputType="number"
+            style="@style/AppTheme"
+            android:layout_height="wrap_content"
+            android:id="@+id/id_text"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button_add_rem"
+        style="@style/AppTheme"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/custombutton"
+        android:text="Agregar recordatorio"
+        android:textSize="20sp" />
+
+</LinearLayout>

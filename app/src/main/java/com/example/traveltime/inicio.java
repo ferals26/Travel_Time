@@ -50,6 +50,23 @@ public class inicio extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void tusviajes(View view){
+        Intent intent = new Intent(this,listsnotes.class);
+        startActivity(intent);
+    }
+
+
+    public void tuMaleta(View view){
+        Intent intent = new Intent(this, TuMaleta.class);
+        startActivity(intent);
+    }
+
+    public void tuActividad(View view){
+        Intent intent = new Intent(this, MainActivity2.class);
+        startActivity(intent);
+
+    }
+
     private void getUserInfo(){
         String id = mAuth.getCurrentUser().getUid();
         mDatabase.child("Users").child(id).addValueEventListener(new ValueEventListener() {

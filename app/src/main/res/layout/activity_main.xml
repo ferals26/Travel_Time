@@ -8,7 +8,7 @@
 
 
     <TextView
-        android:id="@+id/tvDate1"
+        android:id="@+id/fecha1"
         android:layout_width="137dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView3"
@@ -69,8 +69,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
-        android:layout_marginStart="107dp"
-        android:layout_marginLeft="107dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="94dp"
         android:layout_marginTop="200dp"
         android:layout_marginRight="-37dp"
         android:layout_toEndOf="@+id/textView2"
@@ -125,7 +125,7 @@
         android:layout_marginRight="17dp" />
 
     <TextView
-        android:id="@+id/tvDate"
+        android:id="@+id/fecha"
         android:layout_width="137dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView3"
@@ -153,6 +153,7 @@
         />
 
     <EditText
+        android:id="@+id/NombreViaje"
         android:layout_width="300dp"
         android:layout_height="40dp"
         android:layout_centerHorizontal="true"
@@ -175,7 +176,7 @@
         android:id="@+id/button1"
         android:layout_width="150dp"
         android:layout_height="40dp"
-        android:layout_marginLeft="200dp"
+        android:layout_marginLeft="210dp"
         android:layout_marginTop="600dp"
         android:background="@drawable/custom_buttom"
         android:text="Cancelar"
