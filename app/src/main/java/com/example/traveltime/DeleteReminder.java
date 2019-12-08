@@ -17,11 +17,12 @@ import androidx.appcompat.app.AppCompatActivity;
 public class DeleteReminder extends AppCompatActivity {
     int myear, mdate, mmonth, mmin, mhour;
     int num = 1;
-
+    Button Regreso;
     DataBaseHelper myDb;
     AlarmDatabase myAlarmDb;
 
     EditText delete_id_text;
+    Button button_add_rem;
     Button button_del_rem;
     AlarmManager alarmManager;
     PendingIntent pendingIntent;
@@ -52,6 +53,14 @@ public class DeleteReminder extends AppCompatActivity {
 
 
         deleteRem();
+
+        Regreso = (Button) findViewById(R.id.btnRegreso);
+        Regreso.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(DeleteReminder.this, MainActivity2.class));
+            }
+        });
     }
 
     public void deleteRem() {
@@ -59,14 +68,15 @@ public class DeleteReminder extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Integer deleteRows = myDb.Deletedata(delete_id_text.getText().toString());
-                if (deleteRows > 0) {
-                    Toast.makeText(DeleteReminder.this, "Deletion Successful", Toast.LENGTH_SHORT).show();
+                if (deleteRows >= 0 ) {
+                    Toast.makeText(DeleteReminder.this, "Recordatorio eliminado", Toast.LENGTH_SHORT).show();
 
                 } else {
-                    Toast.makeText(DeleteReminder.this, "No rows deletes", Toast.LENGTH_SHORT).show();
-
+                    Toast.makeText(DeleteReminder.this, "No hay recordatorios", Toast.LENGTH_SHORT).show();
                 }
             }
         });
     }
+
+
 }

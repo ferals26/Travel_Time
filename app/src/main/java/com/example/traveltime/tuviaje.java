@@ -10,6 +10,7 @@ import android.widget.Button;
 import java.util.Calendar;
 
 public class tuviaje extends AppCompatActivity {
+    Button Actividad;
 
 
 
@@ -17,6 +18,14 @@ public class tuviaje extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tuviaje);
+
+        Actividad = (Button) findViewById(R.id.actividadbtn);
+        Actividad.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(tuviaje.this, MainActivity2.class));
+            }
+        });
 
 
 

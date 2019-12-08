@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#E1BEE7">
+    android:background="#FFFF">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,7 +19,7 @@
             android:text="Nombre del evento"
             style="@style/AppTheme"
             android:width="150dp"
-            android:textSize="18sp" />
+            android:textSize="16sp" />
         <EditText
             android:layout_width="0dp"
             android:layout_weight="1"
@@ -44,6 +44,7 @@
         <Button
             android:layout_width="0dp"
             android:layout_weight="1"
+            android:layout_marginTop="10dp"
             android:textSize="20sp"
             android:text="Ingresa Fecha"
             style="@style/AppTheme"
@@ -59,13 +60,14 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Recordatorio"
+            android:text="Hora del evento"
             style="@style/AppTheme"
             android:width="150dp"
             android:textSize="18sp"/>
         <Button
             android:layout_width="0dp"
             android:layout_weight="1"
+            android:layout_marginTop="10dp"
             android:textSize="20sp"
             android:text="Tiempo de entrada"
             style="@style/AppTheme"
@@ -120,13 +122,24 @@
 
     <Button
         android:id="@+id/button_add_rem"
-        style="@style/AppTheme"
+        android:textColor="#FFFFFF"
         android:layout_width="200dp"
         android:layout_height="50dp"
         android:layout_gravity="center"
         android:layout_marginTop="40dp"
-        android:background="@drawable/custombutton"
+        android:background="@drawable/custom_buttom"
         android:text="Agregar recordatorio"
-        android:textSize="20sp" />
+        android:textSize="17sp" />
+
+    <Button
+        android:id="@+id/btnRegreso"
+        android:textColor="#FFFFFF"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/custom_buttom"
+        android:text="Regresar"
+        android:textSize="17sp" />
 
 </LinearLayout>

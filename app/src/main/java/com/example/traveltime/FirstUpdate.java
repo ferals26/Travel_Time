@@ -22,6 +22,7 @@ public class FirstUpdate extends AppCompatActivity {
     Intent my_intent;
     Context context;
     DataBaseHelper myDb;
+    Button Regreso;
 
 
     @Override
@@ -37,7 +38,13 @@ public class FirstUpdate extends AppCompatActivity {
 
         myDb = new DataBaseHelper(this);
 
-
+        Regreso = (Button) findViewById(R.id.btnRegreso);
+        Regreso.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(FirstUpdate.this, MainActivity2.class));
+            }
+        });
 
 
 
@@ -51,7 +58,7 @@ public class FirstUpdate extends AppCompatActivity {
 
                 if (res.getCount() == 0) {
                     //show message
-                    Toast.makeText(FirstUpdate.this,"No Data Found",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(FirstUpdate.this,"No hay recordatorios existentes",Toast.LENGTH_SHORT).show();
                     return;
                 }
                 else

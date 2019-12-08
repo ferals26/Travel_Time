@@ -5,13 +5,28 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:theme="@style/AppTheme"
-    android:background="#FF7043">
+    android:background="#FFFF">
+
+    <ImageView
+        android:layout_marginTop="25dp"
+        android:layout_gravity="center"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/contenido"/>
+    <TextView
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:layout_marginTop="10dp"
+        android:text="Actualizar recordatorio" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Enter the id of the event You want to update"
-        android:layout_marginTop="120dp"
+        android:text="Ingrese el id del recordatorio que desea modificar"
+        android:layout_marginTop="70dp"
         android:layout_marginBottom="20dp"
         android:width="200dp"
         android:textSize="20sp"
@@ -19,7 +34,7 @@
         android:textAlignment="center"
         />
     <EditText
-        android:layout_width="40dp"
+        android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:inputType="number"
         android:layout_gravity="center_horizontal"
@@ -27,12 +42,26 @@
         android:textSize="20sp"
         android:layout_marginBottom="40dp"/>
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Update reminder"
+        android:layout_marginTop="30dp"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:text="Modificar recordatorio"
         android:layout_gravity="center"
         android:id="@+id/up_rem"
-        android:textSize="25sp"
-        android:background="@drawable/custombutton"/>
+        android:textColor="#FFFFFF"
+        android:textSize="17sp"
+        android:background="@drawable/custom_buttom"/>
+    <Button
+        android:id="@+id/btnRegreso"
+        android:textColor="#FFFFFF"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/custom_buttom"
+        android:text="Regresar"
+        android:textSize="17sp" />
+
+
 
 </LinearLayout>

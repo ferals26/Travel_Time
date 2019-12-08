@@ -25,6 +25,7 @@ public class UpdateActivity extends AppCompatActivity {
     int num = 1;
     String update_id;
     int id_number;
+    Button Regreso;
 
     DataBaseHelper myDb;
     AlarmDatabase myAlarmDb;
@@ -55,6 +56,14 @@ public class UpdateActivity extends AppCompatActivity {
 
         myDb = new DataBaseHelper(this);
 
+        Regreso = (Button) findViewById(R.id.btnRegreso);
+        Regreso.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(UpdateActivity.this, MainActivity2.class));
+            }
+        });
+
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
             update_id = extras.getString("id");
@@ -64,11 +73,6 @@ public class UpdateActivity extends AppCompatActivity {
 
 
         int number = 1;
-
-
-
-
-
 
 
         button_update_rem = (Button) findViewById(R.id.button_update_rem);
@@ -86,7 +90,7 @@ public class UpdateActivity extends AppCompatActivity {
         Cursor res = myDb.getAllData();
         if (res.getCount() == 0) {
             //show message
-            Toast.makeText(UpdateActivity.this,"Data Not Found",Toast.LENGTH_SHORT).show();
+            Toast.makeText(UpdateActivity.this,"No hay recordatorios",Toast.LENGTH_SHORT).show();
             return;
         }
         int result = Integer.parseInt(getString(id_number));
@@ -110,10 +114,10 @@ public class UpdateActivity extends AppCompatActivity {
                 boolean isUpdate = myDb.UpdateData(id_text.getText().toString(), name_text.getText().toString(), date_text.getText().toString(), time_text.getText().toString(), desc_text.getText().toString());
 
                 if (isUpdate == true) {
-                    Toast.makeText(UpdateActivity.this, "Updation Successful", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(UpdateActivity.this, "Recordatorio actualizado", Toast.LENGTH_SHORT).show();
 
                 } else {
-                    Toast.makeText(UpdateActivity.this, "Updation UnSuccessful", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(UpdateActivity.this, "El recordatorio no se puede actualizar", Toast.LENGTH_SHORT).show();
 
                 }
 

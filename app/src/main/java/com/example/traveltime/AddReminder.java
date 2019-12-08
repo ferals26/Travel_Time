@@ -8,6 +8,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -25,7 +26,7 @@ public class AddReminder extends AppCompatActivity {
     int myear, mdate, mmonth, mmin, mhour;
     int num = 1;
     String add_rem_id="1";
-
+    Button Regreso;
     DataBaseHelper myDb;
     AlarmDatabase myAlarmDb;
 
@@ -49,6 +50,13 @@ public class AddReminder extends AppCompatActivity {
         myDb = new DataBaseHelper(this);
 
 
+        Regreso = (Button) findViewById(R.id.btnRegreso);
+        Regreso.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(AddReminder.this, MainActivity2.class));
+            }
+        });
         date_text = (Button) findViewById(R.id.date_text);
         time_text = (Button) findViewById(R.id.time_text);
         id_text = (TextView) findViewById(R.id.id_text);
@@ -159,10 +167,12 @@ public class AddReminder extends AppCompatActivity {
             public void onClick(View v) {
                 boolean isInserted = myDb.insertData(name_text.getText().toString(), date_text.getText().toString(), time_text.getText().toString(), desc_text.getText().toString());
 
+
+
                 if (isInserted == true) {
-                    Toast.makeText(AddReminder.this, "alarm scheduled Successfully", Toast.LENGTH_LONG).show();
+                    Toast.makeText(AddReminder.this, "Recordatorio agregado", Toast.LENGTH_LONG).show();
                 } else {
-                    Toast.makeText(AddReminder.this, "Error setting alarm", Toast.LENGTH_LONG).show();
+                    Toast.makeText(AddReminder.this, "Error", Toast.LENGTH_LONG).show();
                 }
                 final Calendar calendar = Calendar.getInstance();
                 my_intent = new Intent(AddReminder.this, AlarmReceiver.class);
