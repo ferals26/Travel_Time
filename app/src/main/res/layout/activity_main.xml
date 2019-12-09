@@ -194,4 +194,5 @@
         android:text="Regresar"
         android:textColor="#FFFFFF"
         tools:ignore="DuplicateIds" />
+
 </RelativeLayout>

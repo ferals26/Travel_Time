@@ -88,6 +88,10 @@ public class registrarusuario extends AppCompatActivity implements View.OnClickL
             Toast.makeText(this,"Se debe ingresar una contraseña",Toast.LENGTH_LONG).show();
             return;
         }
+        if(Contraseña.length()<6){
+            Toast.makeText(this,"La contraseña debe tener al menos 6 caracteres\"",Toast.LENGTH_LONG).show();
+            return;
+        }
 
 
         progressDialog.setMessage("Realizando registro...");

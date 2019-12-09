@@ -20,6 +20,7 @@ import java.util.Calendar;
 
 public class tuviaje extends AppCompatActivity {
     Button Actividad;
+    Button Regresar;
     Button Hospedaje;
     private FirebaseAuth mAuth;
     private TextView Miviaje;
@@ -31,6 +32,15 @@ public class tuviaje extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tuviaje);
+
+        Regresar = (Button) findViewById(R.id.Regresar);
+        Regresar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(tuviaje.this, inicio.class));
+            }
+        });
+
         mAuth = FirebaseAuth.getInstance();
         mDatabase = FirebaseDatabase.getInstance().getReference();
         Miviaje = (TextView)findViewById(R.id.Miviaje);

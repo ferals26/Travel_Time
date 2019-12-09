@@ -170,12 +170,12 @@
         android:background="@drawable/custom_buttom"
         />
     <Button
-        android:id="@+id/Eliminar"
+        android:id="@+id/Regresar"
         android:layout_width="150dp"
         android:layout_height="40dp"
         android:layout_marginLeft="210dp"
         android:layout_marginTop="600dp"
-        android:text="Eliminar"
+        android:text="Regresar"
         android:background="@drawable/custom_buttom"
         android:textColor="#FFFFFF"
         tools:ignore="DuplicateIds" />
