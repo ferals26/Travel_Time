@@ -9,6 +9,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
@@ -37,6 +38,7 @@ public class Hospedaje extends AppCompatActivity {
     private TextView Fecha2;
     private Button  btnCrear;
     private FirebaseAuth firebaseAuth;
+    private  Spinner spinner;
 
 
 
@@ -78,12 +80,15 @@ public class Hospedaje extends AppCompatActivity {
                 String Habitacion = Habitaciones.getText().toString();
                 String FechaLlegada = Fecha1.getText().toString();
                 String FechaIda = Fecha2.getText().toString();
+                Spinner spinner = (Spinner)findViewById(R.id.spinner3);
+                String reservacion = spinner.getSelectedItem().toString();
                 Map<String, Object> DatosHotel = new HashMap<>();
                 DatosHotel.put("NombreViajes", NombreViaje);
                 DatosHotel.put("Personas", Persona);
                 DatosHotel.put("Habitaciones", Habitacion);
                 DatosHotel.put("Check-in", FechaLlegada);
                 DatosHotel.put("Check-on", FechaIda);
+                DatosHotel.put("Reservaciones", reservacion);
                 mDatabase.child("Hospedaje").push().setValue(DatosHotel);
 
 
@@ -146,5 +151,11 @@ public class Hospedaje extends AppCompatActivity {
                 mDisplayDate.setText(date);
             }
         };
+
+        spinner = (Spinner)findViewById(R.id.spinner3);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.Reservaciones, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
+
     }
 }
