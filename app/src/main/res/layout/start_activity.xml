@@ -40,7 +40,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:gravity="center">
+            android:gravity="center"
+            >
             <ImageView
                 android:layout_width="64dp"
                 android:layout_height="64dp"
@@ -50,10 +51,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Agregar recordatorio"
-                android:id="@+id/add_reminder"
                 android:textSize="14sp"
                 android:textColor="@color/texoprimario"
-                android:gravity="center" />
+                android:gravity="center"
+                android:id="@+id/add_reminder"/>
         </LinearLayout>
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
@@ -64,7 +65,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:gravity="center">
+                android:gravity="center"
+                >
                 <ImageView
                     android:layout_width="64dp"
                     android:layout_height="64dp"
@@ -74,8 +76,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Visualizar recordatorio"
+                    android:textSize="15sp"
                     android:id="@+id/view_reminder"
-                    android:textSize="14sp"
                     android:textColor="@color/texoprimario"
                     android:gravity="center"/>
             </LinearLayout>
@@ -93,7 +95,8 @@
         <androidx.cardview.widget.CardView
             android:layout_width="150dp"
             android:layout_height="140dp"
-            android:layout_margin="10dp">
+            android:layout_margin="10dp"
+            >
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -108,7 +111,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Actualizar recordatorio"
-                    android:textSize="14sp"
+                    android:textSize="15sp"
                     android:id="@+id/update_reminder"
                     android:textColor="@color/texoprimario"
                     android:gravity="center"/>
@@ -133,7 +136,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Eliminar recordatorio"
-                    android:textSize="14sp"
+                    android:textSize="15sp"
                     android:id="@+id/delete_reminder"
                     android:textColor="@color/texoprimario"
                     android:gravity="center"/>

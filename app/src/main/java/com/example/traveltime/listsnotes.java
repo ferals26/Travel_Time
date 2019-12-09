@@ -31,6 +31,10 @@ public class listsnotes extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listsnotes);
+        getSupportActionBar().setTitle("Leer Datos de la base dedatos");
+
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myref = database.getReference();
 
 
         tuviaje = (Button) findViewById(R.id.tuviaje);

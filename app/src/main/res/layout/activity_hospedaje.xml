@@ -32,7 +32,7 @@
         android:layout_marginEnd="56dp"
         android:layout_marginRight="56dp"
         android:hint="Seleccionar fecha"
-        android:textSize="11sp" />
+        android:textSize="12sp" />
 
     <TextView
         android:id="@+id/textView4"
@@ -128,7 +128,7 @@
         android:layout_marginEnd="217dp"
         android:layout_marginRight="217dp"
         android:hint="Seleccionar fecha"
-        android:textSize="11sp" />
+        android:textSize="12sp" />
 
     <TextView
         android:id="@+id/textView7"
