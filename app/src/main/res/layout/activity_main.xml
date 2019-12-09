@@ -6,6 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <Button
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        android:text="Ingresa Fecha"
+        style="@style/AppTheme"
+        android:layout_height="wrap_content"
+        android:id="@+id/date_text"/>
+
 
     <TextView
         android:id="@+id/fecha1"
@@ -102,7 +112,9 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
-    <androidx.appcompat.widget.AppCompatSpinner
+
+
+    <Spinner
         android:id="@+id/spinner1"
         android:layout_width="149dp"
         android:layout_height="wrap_content"
@@ -113,7 +125,7 @@
         android:layout_marginEnd="204dp"
         android:layout_marginRight="204dp" />
 
-    <androidx.appcompat.widget.AppCompatSpinner
+    <Spinner
         android:id="@+id/spinner2"
         android:layout_width="153dp"
         android:layout_height="wrap_content"
@@ -169,7 +181,7 @@
         android:layout_marginLeft="40dp"
         android:layout_marginTop="600dp"
         android:background="@drawable/custom_buttom"
-        android:text="Aceptar"
+        android:text="Crear viaje"
         android:textColor="#FFFFFF" />
 
     <Button
@@ -179,7 +191,7 @@
         android:layout_marginLeft="210dp"
         android:layout_marginTop="600dp"
         android:background="@drawable/custom_buttom"
-        android:text="Cancelar"
+        android:text="Regresar"
         android:textColor="#FFFFFF"
         tools:ignore="DuplicateIds" />
 </RelativeLayout>

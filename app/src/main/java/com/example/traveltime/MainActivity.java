@@ -1,6 +1,7 @@
 package com.example.traveltime;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
@@ -9,6 +10,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -43,15 +45,64 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     private DatePickerDialog.OnDateSetListener mDateSetListener1;
     private Spinner spinner;
     private Spinner spinners;
-   Button boton;
-   Button boton1;
+    Button boton1;
+    private EditText Nombredelviaje;
+    private TextView Fecha1;
+    private TextView Fecha2;
+    private Button  btnCrear;
+    private FirebaseAuth firebaseAuth;
 
+
+
+
+    private DatabaseReference mDatabase;
+    private DatePickerDialog.OnDateSetListener mDateListener;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        boton= (Button) findViewById(R.id.button);
+        Nombredelviaje = (EditText) findViewById(R.id.NombreViaje);
+        Fecha1 = (TextView)findViewById(R.id.fecha);
+        Fecha2 = (TextView) findViewById(R.id.fecha1);
+        btnCrear = (Button) findViewById(R.id.button);
+
+
+        firebaseAuth = FirebaseAuth.getInstance();
+        mDatabase = FirebaseDatabase.getInstance().getReference();
+
+       btnCrear.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               String NombreViaje = Nombredelviaje.getText().toString();
+               String FechaSalida = Fecha1.getText().toString();
+               String FechaRegreso = Fecha2.getText().toString();
+               Spinner spinner = (Spinner)findViewById(R.id.spinner1);
+               String Origen = spinner.getSelectedItem().toString();
+               Spinner spinners = (Spinner)findViewById(R.id.spinner2);
+               String Destino = spinners.getSelectedItem().toString();
+
+
+
+
+
+               Map<String, Object> DatosViajes = new HashMap<>();
+               DatosViajes.put("NombreViajes", NombreViaje);
+               DatosViajes.put("FechaSalida", FechaSalida);
+               DatosViajes.put("FechaRegreso", FechaRegreso);
+               DatosViajes.put("Origen", Origen);
+               DatosViajes.put("Origen", Origen);
+
+
+
+               mDatabase.child("Viajes").push().setValue(DatosViajes);
+
+
+           }
+       });
+
+
+
         boton1= (Button) findViewById(R.id.button1);
 
 
@@ -141,4 +192,5 @@ mDateSetListener = new DatePickerDialog.OnDateSetListener() {
     public void onNothingSelected(AdapterView<?> parent) {
 
     }
+
 }

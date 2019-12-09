@@ -93,7 +93,7 @@ public class registrarusuario extends AppCompatActivity implements View.OnClickL
         progressDialog.setMessage("Realizando registro...");
         progressDialog.show();
 
-        firebaseAuth.createUserWithEmailAndPassword(Email, Contraseña).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+        firebaseAuth.createUserWithEmailAndPassword(Email,Contraseña).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                if(task.isSuccessful()){
