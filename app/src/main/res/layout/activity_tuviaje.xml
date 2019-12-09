@@ -150,14 +150,16 @@
         android:textSize="22sp"
         android:textColor="@color/texoprimario"
         />
+    <EditText
+        android:id="@+id/NombreViaje"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="111dp"
+        android:hint="Escribir nombre del viaje"
+        android:background="@drawable/edit_round"
+        />
 
-    <TextView
-        android:id="@+id/Miviaje"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textStyle="bold"
-        android:layout_marginTop="10dp"
-        android:text="NombreDelViaje" />
 
     <Button
         android:id="@+id/Modificar"

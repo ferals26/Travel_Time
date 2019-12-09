@@ -43,7 +43,7 @@ public class tuviaje extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
         mDatabase = FirebaseDatabase.getInstance().getReference();
-        Miviaje = (TextView)findViewById(R.id.Miviaje);
+
 
 
         Actividad = (Button) findViewById(R.id.actividadbtn);
@@ -63,26 +63,9 @@ public class tuviaje extends AppCompatActivity {
         });
 
 
-        getUserInfo();
+
 
     }
 
-    private void getUserInfo(){
-        String id = mAuth.getCurrentUser().getUid();
-        mDatabase.child("Viajes").child(id).addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if(dataSnapshot.exists()){
-                    String Viaje = dataSnapshot.child("NombreViajes").getValue().toString();
 
-                    Miviaje.setText(Viaje);
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
-    }
 }

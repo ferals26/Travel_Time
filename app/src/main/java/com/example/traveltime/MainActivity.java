@@ -96,6 +96,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 DatosViajes.put("Origen", Origen);
                 DatosViajes.put("Destino", Destino);
                 mDatabase.child("Viajes").push().setValue(DatosViajes);
+                startActivity(new Intent(MainActivity.this, listsnotes.class));
 
 
             }
