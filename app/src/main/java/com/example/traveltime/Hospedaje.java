@@ -26,6 +26,7 @@ import java.util.Map;
 
 public class Hospedaje extends AppCompatActivity {
     Button boton1;
+    Button boton6;
     private static final String TAG = "MainActivity";
     private TextView mDisplayDate1;
     private TextView mDisplayDate;
@@ -60,10 +61,15 @@ public class Hospedaje extends AppCompatActivity {
         firebaseAuth = FirebaseAuth.getInstance();
         mDatabase = FirebaseDatabase.getInstance().getReference();
 
+        boton6 = (Button)findViewById(R.id.button6);
+        boton6.setOnClickListener(new View.OnClickListener(){
 
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Hospedaje.this, Lista_hospedaje.class));
+            }
+        });
         boton1= (Button) findViewById(R.id.button1);
-
-
         boton1.setOnClickListener(new View.OnClickListener(){
 
             @Override
@@ -90,6 +96,7 @@ public class Hospedaje extends AppCompatActivity {
                 DatosHotel.put("Check-on", FechaIda);
                 DatosHotel.put("Reservaciones", reservacion);
                 mDatabase.child("Hospedaje").push().setValue(DatosHotel);
+                startActivity(new Intent(Hospedaje.this, Lista_hospedaje.class));
 
 
             }

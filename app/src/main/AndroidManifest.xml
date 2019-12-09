@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.traveltime">
-    <uses-permission android:name="com.android.alarm.permission.SET_ALARM"/>
+
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -13,7 +14,7 @@
         android:roundIcon="@mipmap/reminder_app_icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
+        <activity android:name=".Lista_hospedaje"></activity>
         <activity android:name=".Hospedaje" />
         <activity android:name=".TuMaleta" />
         <activity android:name=".login">
@@ -27,22 +28,20 @@
         <activity android:name=".registrarusuario" />
         <activity android:name=".tuviaje" />
         <activity android:name=".listsnotes" />
-        <activity android:name=".MainActivity"/>
+        <activity android:name=".MainActivity" />
         <activity android:name=".DeleteReminder" />
         <activity android:name=".UpdateActivity" />
         <activity android:name=".AddReminder" />
         <activity android:name=".FirstUpdate" />
-        <activity android:name=".MainActivity2"/>
+        <activity android:name=".MainActivity2" />
 
         <receiver
             android:name=".AlarmReceiver"
-            android:label="Alarm"></receiver>
+            android:label="Alarm" />
 
         <service
             android:name=".RingtonePlayingService"
             android:enabled="true" />
     </application>
-
-
 
 </manifest>
