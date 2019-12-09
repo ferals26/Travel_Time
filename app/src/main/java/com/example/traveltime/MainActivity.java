@@ -1,9 +1,9 @@
 package com.example.traveltime;
-
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
-
+import android.app.ProgressDialog;
 import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
@@ -26,6 +26,8 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -61,11 +63,11 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         Nombredelviaje = (EditText) findViewById(R.id.NombreViaje);
         Fecha1 = (TextView)findViewById(R.id.fecha);
         Fecha2 = (TextView) findViewById(R.id.fecha1);
         btnCrear = (Button) findViewById(R.id.button);
+
 
 
         firebaseAuth = FirebaseAuth.getInstance();
@@ -82,24 +84,21 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                Spinner spinners = (Spinner)findViewById(R.id.spinner2);
                String Destino = spinners.getSelectedItem().toString();
 
-
-
-
-
                Map<String, Object> DatosViajes = new HashMap<>();
                DatosViajes.put("NombreViajes", NombreViaje);
                DatosViajes.put("FechaSalida", FechaSalida);
                DatosViajes.put("FechaRegreso", FechaRegreso);
                DatosViajes.put("Origen", Origen);
-               DatosViajes.put("Origen", Origen);
-
-
-
+               DatosViajes.put("Destino", Destino);
                mDatabase.child("Viajes").push().setValue(DatosViajes);
+
+
 
 
            }
        });
+
+
 
 
 
@@ -179,7 +178,6 @@ mDateSetListener = new DatePickerDialog.OnDateSetListener() {
 };
 
     }
-
 
 
     @Override
